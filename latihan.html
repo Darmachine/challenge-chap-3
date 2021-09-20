@@ -10,7 +10,8 @@
   <link rel="icon" href="https://kerjabilitas.com/user_image/user2/logo_7b6caab85699ca72e06917e9bad7512c.png">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
-  <script src="./assets/js/jquery-3.6.0.min.js" rel="javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -62,7 +63,7 @@
 </section>
 <section id="hal1" class="page1">
   <div class="container">
-    <div class="d-grid col-12 mx-auto">
+    <div class="d-grid col-md-12 col-sm-3 mx-auto text-center">
         <h1>PLAY TRADITIONAL GAME</h1>
       </div>
       <div>
@@ -191,33 +192,58 @@
         </div>
     </div>
     <div class="systemrequirements">
-    <div class="info_table_wrap">
-      <div class="row row-md-6 info_table">
-        <div class="col-md-6 info_table ">
-         <h2 class="text-uppercase">OS:</h2>
-            <p class="text-white"style="margin-left:10%; margin-right:10%;">Windows 7 64-bit Only</p>
-          <p class="text-white"style="margin-left:10%; margin-right:10%;">(No OSX support at this time)</p></div>
-        <div class="col-md-6 info_table">
-          <h2 class="text-uppercase">Processor:</h2>
-          <p class="text-white"style="margin-left:10%; margin-right:20%;">Intel Core 2 Duo @2.4GHz or AMD Athlon X2 @2.8GHz</p>
-          </div>
-      </div>      
-      <div class="row info_table">
-         <div class="col-md-6 info_table">
-         <h2 class="text-uppercase">memory:</h2>
-         <p class="text-white"style="margin-left:10%; margin-right:10%;">4 GB Ram</p>
+      <table class="table table-bordered table-content-sys">
+        <tbody>
+          <tr>
+            <td>
+              <div class="col-md-12 col-sm-6">
+                <h2 class="text-uppercase">OS:</h2>
+                   <p class="text-white"style="margin-left:10%; margin-right:10%;">Windows 7 64-bit Only</p>
+                 <p class="text-white"style="margin-left:10%; margin-right:10%;">(No OSX support at this time)</p>
+               </div>
+          </td>
+          <td>
+            <div class="col-md-6 ">
+              <h2 class="text-uppercase">Processor:</h2>
+              <p class="text-white"style="margin-right:6%;">Intel Core 2 Duo @2.4GHz or AMD Athlon X2 @2.8GHz</p>
+              </div>
+            </td>
+        </tr>
+        <tr>
+          <td> 
+            <div class="row ">
+            <div class="col-md-6 ">
+            <h2 class="text-uppercase">memory:</h2>
+            <p class="text-white"style="margin-left:10%; margin-right:10%;">4 GB Ram</p>
+            </div>
+          </td>
+          <td>
+            <div class="col-md-6 ">
+            <h2 class="text-uppercase">storage:</h2>
+            <p class="text-white"style="margin-left:10%; margin-right:10%;">8 GB Available space</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="col-md-12 ">
+              <h2 class="text-uppercase">graphics:</h2>
+              <p class="text-white"style="margin-left:5%; margin-right:20%;">NVIDIA GTX 660 2GB or </p>
+              <p class="text-white"style="margin-left:5%; margin-right:10%;"> Radeon 7850 2GB DirectX 11 (Shader model 5)</p>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
          </div>
-        <div class="col-md-6 info_table">
-         <h2 class="text-uppercase">storage:</h2>
-         <p class="text-white"style="margin-left:10%; margin-right:10%;">8 GB Available space</p>
-           </div>
-      </div>
-      <div class="row info_table">
-        <div class="col-md-12 info_table">
-          <h2 class="text-uppercase">graphics:</h2>
-          <p class="text-white"style="margin-left:5%; margin-right:20%;">NVIDIA GTX 660 2GB or </p>
-          <p class="text-white"style="margin-left:5%; margin-right:10%;"> Radeon 7850 2GB DirectX 11 (Shader model 5)</p>
-        </p></div></div></div></div></div>
+       </div>
+    </td>
+  </tr>
+</tbody>
+</table><tbody>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>
@@ -325,7 +351,7 @@
       <a href="#hal2" style="padding-left: 20px;padding-right: 20px;"><span>About</span></a>
       <a href="#hal3" style="padding-left: 20px;padding-right: 20px;"><span>Game Features</span></a>
       <a href="#hal4" style="padding-left: 20px;padding-right: 20px;"><span>System Requirements</span></a>
-      <a href="#hal5" style="padding-left: 20px;padding-right: 20px;"><span>Quotes</span></a>
+      <a href="#hal5"><span>Quotes</span></a>
       <a href="https://facebook.com/" class="col offset-4" style="padding-left: 20px;padding-right: 20px;"><span class="icon facebook">
           <svg width="10" height="20" viewBox="0 0 10 20" fill="#4267B2" >
             <path 
