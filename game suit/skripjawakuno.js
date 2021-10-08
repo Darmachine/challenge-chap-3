@@ -22,35 +22,46 @@ selectionButton.forEach((selectionButton) => {
     });
 });
 
-function makeSelection(selection) {
-    const computerSelection = randomSelection()
-    const yourWinner = isWinner(selection, computerSelection)
-    const computerWinner = isWinner(computerSelection, selection)
+function randomSelection() {
+    const randomIndex = Math.floor(Math.random() * SELECTION.length);
+    return SELECTION[randomIndex];
+}
 
-    addSelectionResult(computerSelection, computerWinner)
-    addSelectionResult(selection, yourWinner)
+function isWinner(selection, opponentSelection) {
+    return selection.beats === opponentSelection.name;
+}
+
+function makeSelection(selection) {
+    const computerSelection = randomSelection();
+    const yourWinner = isWinner(selection, computerSelection);
+    const computerWinner = isWinner(computerSelection, selection);
+
+    addSelectionResult(computerSelection, computerWinner);
+    addSelectionResult(selection, yourWinner);
+    console.log(selection)
+    console.log(computerSelection)
 
     if (yourWinner) {
-        document.getElementById(Versus).src = '../assets/images/You Win.png'
+        document.getElementById("Versus").src = "../assets/images/You Win.png";
     }
     if (computerWinner) {
-        document.getElementById(Versus).src = '../assets/images/You Lose.png'
+        document.getElementById("Versus").src = "../assets/images/You Lose.png";
     }
 
     function addSelectionResult(selection, winner) {
         if (yourWinner) {
-            document.getElementById(Versus).src = '../assets/images/You Win.png'
+            document.getElementById("Versus").src = "../assets/images/You Win.png";
         } else {
-            document.getElementById(versus).src = '../assets/images/You Lose.png'
+            document.getElementById("Versus").src = "../assets/images/You Lose.png";
         }
     }
 }
 
 function isWinner(selection, opponentSelection) {
-    return selection.beats === opponentSelection.name
+    return selection.beats === opponentSelection.name;
 }
 
 function randomSelection() {
-    const randomIndex = Math.floor(Math.random() * SELECTION.length)
-    return SELECTION[randomIndex]
+    const randomIndex = selectionMath.floor(Math.random() * SELECTION.length);
+    return SELECTION[randomIndex];
 }
