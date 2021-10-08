@@ -1,27 +1,56 @@
-const selectionButton = document.querySelectorAll('[data-selection]')
+// DOM
+const selectionButton = document.querySelectorAll("[data-selection]");
 const SELECTION = [{
-    {
-        name: 'r'
-        beats: 's'
+        name: "r",
+        beats: "s",
     },
     {
-        name: 'p'
-        beats: 'r'
+        name: "p",
+        beats: "r",
     },
     {
-        name: 's'
-        beats: 'p'
-    }
-}]
+        name: "s",
+        beats: "p",
+    },
+];
 
-selectionButton.forEach(selectionButton => {
-    selectionButton.addEventListener('click', e => {
-        const selectionName = selectionButton.dataset.selection
-        const selection = SELECTION.find(selection => selection.name === selectionName)
-        makeSelection(SELECTION)
-    })
-})
+selectionButton.forEach((selectionButton) => {
+    selectionButton.addEventListener("click", (e) => {
+        const selectionName = selectionButton.dataset.selection;
+        const selection = SELECTION.find((selection) => selection.name === selectionName);
+        makeSelection(SELECTION);
+    });
+});
 
 function makeSelection(selection) {
-    console.log(selection)
+    const computerSelection = randomSelection()
+    const yourWinner = isWinner(selection, computerSelection)
+    const computerWinner = isWinner(computerSelection, selection)
+
+    addSelectionResult(computerSelection, computerWinner)
+    addSelectionResult(selection, yourWinner)
+
+    if (yourWinner) {
+        document.getElementById(Versus).src = '../assets/images/You Win.png'
+    }
+    if (computerWinner) {
+        document.getElementById(Versus).src = '../assets/images/You Lose.png'
+    }
+
+    function addSelectionResult(selection, winner) {
+        if (yourWinner) {
+            document.getElementById(Versus).src = '../assets/images/You Win.png'
+        } else {
+            document.getElementById(versus).src = '../assets/images/You Lose.png'
+        }
+    }
+}
+
+function isWinner(selection, opponentSelection) {
+    return selection.beats === opponentSelection.name
+}
+
+function randomSelection() {
+    const randomIndex = Math.floor(Math.random() * SELECTION.length)
+    return SELECTION[randomIndex]
 }
