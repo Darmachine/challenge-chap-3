@@ -4,66 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <title>Gunting Batu Kertas</title>
+    <link rel="stylesheet" href="./stylesheets.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="../assets/icon/logo.png" <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+    <script src="./skripjawakuno.js" defer></script>
 
-</head>
-
-<body>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    You
+    <body style="background-color:#9C835F;">
+        <!-- Header / Navigation Bar -->
+        <header>
+            <div class="row" id="header">
+                <div class="col col-sm-1 col-md-1 col-xl-1">
+                    <button onclick="goback()" id="tombolkembalikemantan"><a href="../index.html"><h1>&lt;</h1></a></button>
                 </div>
-                <div class="col-md-6 col-12">
-                    Bot
+                <div class="col-1 col-sm-1 col-md-1 col-xl-1">
+                    <img class="img-fluid" src="../assets/images/logo.png" alt="" id="pilihanKomputer">
+                </div>
+                <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                    <h1 class="text-black">Rock Paper Scrissors</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="p">
-                    <div class="col-4">
-                        <button class="pemain">
-                        <label for="r"><img src="../assets/images/batu.png" alt=""></label>
+        </header>
+        <!-- Main Menu -->
+        <section>
+            <div class="container text-black" id="grid">
+                <div class="row justify-content-center" id="readyPlayer1">
+                    <div class="col col-sm-4 col-md-4 col-xl-4" ">You</div>
+                    <div class="col col-sm-4 col-md-4 col-xl-4 "">Bot</div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col OFF col-sm-4 col-md-4 col-xl-4">
+                        <button class="selection" data-selection="b" id="nimpuk">
+                            <img class="img-fluid" src="../assets/images/batu.png" alt="" id="r">
                         </button>
                     </div>
+                    <div class="col-4 offset-4 col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-xl-4 offset-xl-4">
+                        <img class="img-fluid" src="../assets/images/batu.png" alt="" id="pilihanKomputer">
+                    </div>
                 </div>
-                <div class="col-4 offset 4">
-                    <button class="Computer">
-                        <label for="rc"><img src="../assets/images/batu.png" alt=""></label>
+                <div class="row justify-content-center">
+                    <div class="col col-sm-4 col-md-4 col-xl-4">
+                        <button class="selection" data-selection="k" id="kukirakerasternyatakertas">
+                         <img class="img-fluid" src="../assets/images/kertas.png" alt="" id="k"></button>
                         </button>
-                </div>
-                <div class="row">
-                    <div class="p">
-                        <div class="col-4">
-                            <button class="pemain">
-                            <label for="p"><img src="../assets/images/kertas.png" alt=""></label>
-                            </button>
-                        </div>
                     </div>
-                    <div class="col-4 text-center">VS</div>
-                    <div class="col-4">
-                        <button class="Computer">
-                            <label for="pc"><img src="../assets/images/kertas.png" alt=""></label>
-                            </button>
+                    <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                        <img class="img-fluid" src="../assets/images/VERSUS.png" alt="" style="max-width: 9.5em;margin-left: -0.5rem;transition: 100ms; size" id="Versus">
                     </div>
-                    <div class="row">
-                        <div class="p">
-                            <div class="col-4">
-                                <button class="pemain">
-                                <label for="s"><img src="../assets/images/gunting.png" alt=""></label>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <button class="Computer">
-                                <label for="sc"><img src="../assets/images/gunting.png" alt=""></label>
-                                </button>
-                        </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-xl-4">
+                        <button class="pilihanKomputer"> <img class="img-fluid" src="../assets/images/kertas.png" alt="" id="pilihanKomputer"></button>
                     </div>
                 </div>
-    </section>
-</body>
+                <div class="row justify-content-center">
+                    <div class="col col-sm-4 col-md-4 col-xl-4">
+                        <button class="selection" data-selection="g" id="robek">
+                            <img class="img-fluid" src="../assets/images/gunting.png" alt="" id="r">
+                        </button>
+                    </div>
+
+                    <div class="col-4 offset-4 col-sm-4 offset-sm-4 col-md-4 offset-md-4 col-xl-4 offset-xl-4 ">
+                        <button class="pilihanKomputer"><img class="img-fluid " src="../assets/images/gunting.png " alt=" " id="pilihanKomputer "><button class="selection" data-selection="g" id="nimpuk"></button>
+                    </div>
+                </div>
+
+                <!-- #NyatanyaNyegerin -->
+                <div class="row justify-content-center ">
+                    <div class="col col-sm-4 col-md-4 col-xl-4 " data-selection="refresh">
+                        <button class=" img-fluid " id="refresh "><img src="../assets/images/refresh.png " alt=" " style="max-width: 3rem; ">
+                     </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </body>
 
 </html>
